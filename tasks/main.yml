@@ -1,0 +1,6 @@
+---
+- name: Install yum-cron.
+  sudo: yes
+  yum:
+    name: yum-cron
+    state: present
