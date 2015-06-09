@@ -12,3 +12,10 @@
     dest: /etc/sysconfig/yum-cron
   notify:
     - restart yum-cron
+
+- name: Start yum-cron.
+  sudo: yes
+  service:
+    name: yum-cron
+    state: running
+    enabled: yes
