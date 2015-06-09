@@ -10,3 +10,5 @@
   template:
     src: etc/sysconfig/yum-cron.j2
     dest: /etc/sysconfig/yum-cron
+  notify:
+    - restart yum-cron
