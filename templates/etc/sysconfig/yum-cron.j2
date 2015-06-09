@@ -8,11 +8,11 @@ YUM_PARAMETER=
 CHECK_ONLY={{ yum_cron_check_only }}
 
 # Check to see if you can reach the repos before updating (valid: yes|no)
-CHECK_FIRST=no
+CHECK_FIRST={{ yum_cron_check_first }}
 
 # Don't install, just check and download (valid: yes|no)
 # Implies CHECK_ONLY=yes (gotta check first to see what to download)
-DOWNLOAD_ONLY=no
+DOWNLOAD_ONLY={{ yum_cron_download_only }}
 
 # Error level, practical range 0-10, 0 means print only critical errors which
 # you must be told, 1 means print all errors, even ones that are not important
@@ -35,7 +35,7 @@ RANDOMWAIT="60"
 
 # by default MAILTO is unset, so crond mails the output by itself
 # example:  MAILTO=root
-MAILTO= 
+MAILTO={{ yum_cron_mailto }}
 
 # you may set SYSTEMNAME if you want your yum emails tagged differently
 # default is output of hostname command 

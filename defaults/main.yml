@@ -1,0 +1,5 @@
+---
+yum_cron_check_only: no
+yum_cron_check_first: no
+yum_cron_download_only: no
+yum_cron_mailto: ''
