@@ -6,6 +6,7 @@
     state: present
 
 - name: Copy the configuration file.
+  sudo: yes
   template:
     src: etc/sysconfig/yum-cron.js
     dest: /etc/sysconfig/yum-cron
