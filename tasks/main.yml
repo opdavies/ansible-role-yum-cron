@@ -4,3 +4,8 @@
   yum:
     name: yum-cron
     state: present
+
+- name: Copy the configuration file.
+  template:
+    src: etc/sysconfig/yum-cron.js
+    dest: /etc/sysconfig/yum-cron
