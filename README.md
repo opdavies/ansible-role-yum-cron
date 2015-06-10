@@ -1,0 +1,1 @@
+# Ansible Role: yum-cron
