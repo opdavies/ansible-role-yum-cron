@@ -1,12 +1,12 @@
 ---
 - name: Install yum-cron.
-  sudo: yes
+  become: yes
   yum:
     name: yum-cron
     state: present
 
 - name: Copy the configuration file (CentOS 6).
-  sudo: yes
+  become: yes
   template:
     src: etc/sysconfig/yum-cron.j2
     dest: /etc/sysconfig/yum-cron
@@ -15,7 +15,7 @@
   when: ansible_distribution_version < 7
 
 - name: Copy the configuration file (CentOS 7).
-  sudo: yes
+  become: yes
   template:
     src: etc/yum/yum-cron.conf.j2
     dest: /etc/yum/yum-cron.conf
@@ -24,7 +24,7 @@
   when: ansible_distribution_version >= 7
 
 - name: Start yum-cron.
-  sudo: yes
+  become: yes
   service:
     name: yum-cron
     state: running
