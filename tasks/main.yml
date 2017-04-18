@@ -12,7 +12,7 @@
     dest: /etc/sysconfig/yum-cron
   notify:
     - restart yum-cron
-  when: ansible_distribution_version < 7
+  when: ansible_distribution_major_version == "6"
 
 - name: Copy the configuration file (CentOS 7).
   become: yes
@@ -21,11 +21,11 @@
     dest: /etc/yum/yum-cron.conf
   notify:
     - restart yum-cron
-  when: ansible_distribution_version >= 7
+  when: ansible_distribution_major_version == "7"
 
 - name: Start yum-cron.
   become: yes
   service:
     name: yum-cron
-    state: running
+    state: started
     enabled: yes
