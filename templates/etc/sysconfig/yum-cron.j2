@@ -2,7 +2,7 @@
 # by this package.  Be aware that this is global, and yum is invoked in 
 # several modes by these scripts for which your own parameter might not
 # be appropriate
-YUM_PARAMETER=
+YUM_PARAMETER={{ yum_cron_parameter }}
 
 # Don't install, just check (valid: yes|no)
 CHECK_ONLY={{ yum_cron_check_only }}

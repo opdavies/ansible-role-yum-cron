@@ -1,0 +1,6 @@
+---
+# CentOS 6.
+yum_cron_parameter: '--security'
+
+# Centos 7.
+yum_cron_update_cmd: 'security'
